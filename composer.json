@@ -1,5 +1,5 @@
 {
-    "name": "michal-borek/freshdesk-php-sdk",
+    "name": "hasfoug/freshdesk-php-sdk",
     "description": "PHP SDK for the Freshdesk API (v2)",
     "type": "library",
     "homepage": "https://github.com/michal-borek/freshdesk-php-sdk",
