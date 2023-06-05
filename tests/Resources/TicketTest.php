@@ -9,16 +9,16 @@ use Freshdesk\Resources\Ticket;
  *
  * @author Matthew Clarkson <mpclarkson@gmail.com>
  */
-class TicketApiTest extends TestCase
+class TicketTest extends TestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
         $this->class = Ticket::class;
     }
 
-    public function methodsThatShouldExist()
+    public static function methodsThatShouldExist()
     {
         return [
             ['create'],

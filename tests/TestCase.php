@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Matt
@@ -9,16 +10,18 @@
 namespace Freshdesk\tests;
 
 use Freshdesk\Api;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase as FrameworkTestCase;
 
-abstract class TestCase extends \PHPUnit_Framework_TestCase
+abstract class TestCase extends FrameworkTestCase
 {
 
-    abstract function methodsThatShouldExist();
+    abstract static function methodsThatShouldExist();
 
     /**
      * @var Api
      */
-    protected $api;
+    protected Api $api;
 
     /**
      * The specific class being tested
@@ -26,14 +29,12 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
      */
     protected $class;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->api = new Api("foo", "bar");
     }
 
-    /**
-     * @dataProvider methodsThatShouldExist
-     */
+    #[DataProvider('methodsThatShouldExist')]
     public function testMethodsExist($method)
     {
         $this->assertMethodExists($method);
