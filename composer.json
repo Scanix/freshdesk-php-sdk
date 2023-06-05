@@ -1,5 +1,5 @@
 {
-    "name": "talk-to-me/freshdesk-php-sdk",
+    "name": "scanix/freshdesk-php-sdk",
     "description": "PHP SDK for the Freshdesk API (v2)",
     "type": "library",
     "homepage": "https://github.com/Scanix/freshdesk-php-sdk",
